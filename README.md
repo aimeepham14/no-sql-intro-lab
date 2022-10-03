@@ -17,14 +17,62 @@ Fork and clone this repository and answer questions as you research directly in 
 ## Questions:
 
 1. What does the term noSQL refer to, and what other term is often used synonymously with noSQL?
-1. What are some of the common arguments for using a non-relational versus a relational db?
-1. In this class we will be using the document style of non-relational databases. What are the charecteristics of a document based db? 
-1. In this class we will be using Mongo specificially as our no-SQL db. Look into Mongo and answer this question: what is the priamry difference between how Mongo is maintained vrs SQL?
-1. Mongo DBs are organized into documents. Describe an example of a table in SQL that contains users, and then describe the equivalent DB setup in Mongo. 
-1. What is an example situation where a Mongo database makes sense versus a non-relational db?
-1. What are the benefits of SQL databases? NoSQL Databases?
-1. Explain the differences between ACID and BASE models.
-1. What should you consider when deciding between using a relational database or a non-relational database for your project?
+  - non-relational
+  - does not use rows and columns
+  - can be both tabular and non tabular
+
+2. What are some of the common arguments for using a non-relational versus a relational db?
+  - greater flexibility
+  - greater scalability (in terms of changing data structure)
+  - personal preference
+
+3. In this class we will be using the document style of non-relational databases. What are the charecteristics of a document based db? 
+  - json data (or json like data)
+  - documents structure has fields/values -- values are a variety of support types
+  - allows for the data model to evolve vs having a rigorous structure
+  - no enforced schema
+
+4. In this class we will be using Mongo specifically as our no-SQL db. Look into Mongo and answer this question: what is the priamry difference between how Mongo is maintained versus SQL?
+  - mongo is open source, made by smaller company
+  - some versions of SQL are closed source
+    - Oracle, mySQL, microsoft SQL server
+  - some version are open 
+    - postgres, SQLite
+  - one implementation to rule all of Mongo
+    - same team makes all of the mongo tools
+    - tight integration of all mongo features
+
+5. Mongo DBs are organized into documents. Describe an example of a table in SQL that contains users, and then describe the equivalent DB setup in Mongo. 
+  - user -> blog in SQL use either FK or join
+  - mongo would have embedded objects or 'sub documents'
+    - { userName, email, blogs: [{ blog }, { blog }] }
+
+6. What is an example situation where a Mongo database makes sense versus a relational db?
+  - fast paced development when the data models might change alot
+  - adding features to the database
+  - situations that involve collaborations between lots of teams
+
+7. What are the benefits of SQL databases? NoSQL Databases?
+  - Benefits of SQL:
+    - commonality of language, lack of complex code
+    - established and used in many places
+  - Benefits of noSQL:
+   - familiar languages to devs
+   - 'data that is accessed together should be stored together'
+
+8. Explain the differences between ACID and BASE models.
+  - ACID
+    - A: Transactions atomic
+    - Consistent, ensures durability 
+  - BASE: 
+    - 'appears to work most of the time'
+    - soft state (ie doesn't)
+
+9. What should you consider when deciding between using a relational database or a non-relational database for your project?
+ - personal preference
+ - scale of traffic
+ - speed
+ - what kind of flexibility will you need
 
 
 ## Visual Comparisons
